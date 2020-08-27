@@ -30,4 +30,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 https://github.com/mysterioDev86/angularDevRepo.git
 
 ## Creating DevBranchV1.0
-First Data Binding Example.
+First Data Binding Example
