@@ -1,21 +1,23 @@
 <div class="container-fluid">
-<!--String Interpolation and Property Binding Example Data Binding Example-->    
-<p [style]="visibilityStatus">{{welcomeMsg}}</p>
-<!--Property Binding Example-->
-<label>Item :</label>
-<br/>
-<!-- Event Binding Example
-    <input type="text" class="form-control" name="item" (keyup)="onItemIput($event)" /> 
--->
-<!--Event Binding and 2 way binding example-->
-<input type="text" class="form-control" name="item" (keyup)="onItemIput()" [(ngModel)]="item"/>
-<br/>
-<button class="btn btn-primary" [disabled]="isAddItemBtnDisabled" (click)="onAddition()">Add Item</button>
-<hr>
-<!-- <p [style]="outputVisibility">{{itemList}}</p> -->
-<ol [style]="outputVisibility">
-    <li *ngFor="let item of itemList">
-        {{ item }}
-      </li>
-</ol>
+    <fieldset class="border p-2">
+        <legend class="w-auto">{{welcomeMsg}}</legend>
+        <label>Item :</label>
+        <br />
+        <!-- Event Binding Example
+            <input type="text" class="form-control" name="item" (keyup)="onItemIput($event)" /> 
+        -->
+        <!--Event Binding and 2 way binding example-->
+        <input type="text" class="form-control" name="item" (keyup)="onItemIput()" [(ngModel)]="item" />
+        <br />
+        <button class="btn btn-primary" [disabled]="isAddItemBtnDisabled" (click)="onAddition()">Add Item</button>
+        <br />
+        <br />
+        <hr [style]="hrVisibleStatus"/>
+        <!-- <p [style]="outputVisibility">{{itemList}}</p> -->
+        <ol [style]="outputVisibility">
+            <li *ngFor="let item of itemList">
+                {{ item }}
+            </li>
+        </ol>
+    </fieldset>
 </div>

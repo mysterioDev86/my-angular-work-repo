@@ -4,12 +4,14 @@ import { FormsModule } from "@angular/forms";
 import { AppComponent } from './app.component';
 import { DateTimeComponent } from './date-time/date-time.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { DirectiveLearningComponent } from './directive-learning/directive-learning.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DateTimeComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    DirectiveLearningComponent
   ],
   imports: [
     BrowserModule,

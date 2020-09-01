@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <fieldset class="border p-2">
+        <legend class="w-auto">{{welcomeMsg}}</legend>
+        <label for="item"> Item : </label>
+        <br />
+        <input type="text" name="item" class="form-control" [(ngModel)]="item" />
+        <br />
+        <br />
+        <button class="btn btn-primary" [disabled]="null!=this.item && this.item.length>0?false:true"
+            (click)="onItemAddition()">Add Item</button>
+        <br />
+        <br />
+        <hr [ngStyle]="{display:itemList.length>0?'block':'none'}" /><!--attribute directive example-->
+        <ol *ngIf="itemList.length>0">
+            <li *ngFor="let item of itemList;let i=index" [ngClass]="{oddOl: i%2>0}">
+                {{item}}
+            </li>
+        </ol>
+    </fieldset>
+</div>
