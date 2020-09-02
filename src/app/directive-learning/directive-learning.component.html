@@ -12,7 +12,7 @@
         <br />
         <hr [ngStyle]="{display:itemList.length>0?'block':'none'}" /><!--attribute directive example-->
         <ol *ngIf="itemList.length>0">
-            <li *ngFor="let item of itemList;let i=index" [ngClass]="{oddOl: (i+1%2)>0}">
+            <li *ngFor="let item of itemList;let i=index" [ngClass]="{oddOl: (i%2)>0}">
                 {{item}}
             </li>
         </ol>
